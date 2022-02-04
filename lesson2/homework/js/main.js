@@ -166,9 +166,9 @@
 //             </ul>
 //          </div>`);
 //          break;
+//       default:
+//          console.log('SMTH WRONG');  
 //    }
-
-
 // }
 
 // daySchedule(Math.ceil(Math.random() * 7));
@@ -190,6 +190,8 @@
 //    case false:
 //       console.log('Не високосний');
 //       break;
+//    default:
+//       console.log('SMTH WRONG'); 
 // }
 // //or
 // {
