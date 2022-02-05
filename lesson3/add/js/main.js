@@ -110,38 +110,53 @@
 
 
 // 7. Створити масив з рандомними значеннями, помножити всі його елементи на 5 та перемістити їх в інший масив.
-// 8. Створити масив з будь якими значеннями(стрінги, числа, і тд...).пройтись по ньому, і якщо елемент є числом - додати його в інший масив.
+// let arr = [230, 7, 9, 76, 54, 67, 4];
+// let arr2 = [];
+// for (let i = 0; i < arr.length; i++) {
+//    arr2.push(arr[i] * 5)
+// }
+// console.log(arr2);
 
+
+// 8. Створити масив з будь якими значеннями(стрінги, числа, і тд...).пройтись по ньому, і якщо елемент є числом - додати його в інший масив.
+// let arr = ['67', 5, true, 8, 92, 95];
+// let numbers = [];
+// for (let i = 0; i < arr.length; i++) {
+//    if (typeof arr[i] === 'number') {
+//       numbers.push(arr[i])
+//    }
+// }
+// console.log(numbers);
 
 
 //    -
 //    Дано 2 масиви з рівною кількістю об 'єктів.
 // Масиви:
-//    let usersWithId = [{
-//          id: 1,
-//          name: 'vasya',
-//          age: 31,
-//          status: false
-//       },
-//       {
-//          id: 2,
-//          name: 'petya',
-//          age: 30,
-//          status: true
-//       },
-//       {
-//          id: 3,
-//          name: 'kolya',
-//          age: 29,
-//          status: true
-//       },
-//       {
-//          id: 4,
-//          name: 'olya',
-//          age: 28,
-//          status: false
-//       }
-//    ];
+// let usersWithId = [{
+//       id: 1,
+//       name: 'vasya',
+//       age: 31,
+//       status: false
+//    },
+//    {
+//       id: 2,
+//       name: 'petya',
+//       age: 30,
+//       status: true
+//    },
+//    {
+//       id: 3,
+//       name: 'kolya',
+//       age: 29,
+//       status: true
+//    },
+//    {
+//       id: 4,
+//       name: 'olya',
+//       age: 28,
+//       status: false
+//    }
+// ];
 
 // let citiesWithId = [{
 //       user_id: 3,
@@ -181,24 +196,31 @@
 //                city: 'Ternopil'
 //             }
 //          },
-//          // TO BE CONTINUED .....
 //       ]
 
+// let usersWithCities = [];
+
+// for (const user of usersWithId) {
+//    for (const city of citiesWithId) {
+//       if (user.id === city.user_id) {
+//          user.adress = city;
+//       }
+//    }
+// }
+// usersWithCities.push(usersWithId);
+// console.log(usersWithCities);
 
 
 
-//       -
-//       Взяти масив з 10 чисел або створити його.Вивести в консоль тільки ті елементи,
-//       значення яких є парними.
 
 //       -
 //       Взяти масив з 10 чисел або створити його.Створити 2 й порожній масив.За допомогою будь - якого циклу скопіювати значення одного масиву в інший.
+// let numbers = [45, 78, 9, 5, 87, 34, 5, 9, 3, 1];
+// let newNums = [];
 
 
-//       -
-//       Дано масив: ['a', 'b', 'c'].За допомогою циклу
-// for зібрати всі букви в слово. -
-//    Дано масив: ['a', 'b', 'c'].За допомогою циклу
-// while зібрати всі букви в слово. -
-//    Дано масив: ['a', 'b', 'c'].За допомогою циклу
-// for of зібрати всі букви в слово.
+// for (const number of numbers) {
+//    newNums.push(number);
+// }
+
+// console.log(newNums);
