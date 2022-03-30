@@ -88,117 +88,117 @@
 
 //    -
 //    Є масив
-let coursesArray = [{
-      title: 'JavaScript Complex',
-      monthDuration: 5,
-      hourDuration: 909,
-      modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js']
-   },
-   {
-      title: 'Java Complex',
-      monthDuration: 6,
-      hourDuration: 909,
-      modules: ['html',
-         'css',
-         'js',
-         'mysql',
-         'mongodb',
-         'angular',
-         'aws',
-         'docker',
-         'git',
-         'java core',
-         'java advanced'
-      ]
-   },
-   {
-      title: 'Python Complex',
-      monthDuration: 6,
-      hourDuration: 909,
-      modules: ['html',
-         'css',
-         'js',
-         'mysql',
-         'mongodb',
-         'angular',
-         'aws',
-         'docker',
-         'python core',
-         'python advanced'
-      ]
-   },
-   {
-      title: 'QA Complex',
-      monthDuration: 4,
-      hourDuration: 909,
-      modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'git', 'QA/QC']
-   },
-   {
-      title: 'FullStack',
-      monthDuration: 7,
-      hourDuration: 909,
-      modules: ['html',
-         'css',
-         'js',
-         'mysql',
-         'mongodb',
-         'react',
-         'angular',
-         'aws',
-         'docker',
-         'git',
-         'node.js',
-         'python',
-         'java'
-      ]
-   },
-   {
-      title: 'Frontend',
-      monthDuration: 4,
-      hourDuration: 909,
-      modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
-   }
-];
+// let coursesArray = [{
+//       title: 'JavaScript Complex',
+//       monthDuration: 5,
+//       hourDuration: 909,
+//       modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js']
+//    },
+//    {
+//       title: 'Java Complex',
+//       monthDuration: 6,
+//       hourDuration: 909,
+//       modules: ['html',
+//          'css',
+//          'js',
+//          'mysql',
+//          'mongodb',
+//          'angular',
+//          'aws',
+//          'docker',
+//          'git',
+//          'java core',
+//          'java advanced'
+//       ]
+//    },
+//    {
+//       title: 'Python Complex',
+//       monthDuration: 6,
+//       hourDuration: 909,
+//       modules: ['html',
+//          'css',
+//          'js',
+//          'mysql',
+//          'mongodb',
+//          'angular',
+//          'aws',
+//          'docker',
+//          'python core',
+//          'python advanced'
+//       ]
+//    },
+//    {
+//       title: 'QA Complex',
+//       monthDuration: 4,
+//       hourDuration: 909,
+//       modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'git', 'QA/QC']
+//    },
+//    {
+//       title: 'FullStack',
+//       monthDuration: 7,
+//       hourDuration: 909,
+//       modules: ['html',
+//          'css',
+//          'js',
+//          'mysql',
+//          'mongodb',
+//          'react',
+//          'angular',
+//          'aws',
+//          'docker',
+//          'git',
+//          'node.js',
+//          'python',
+//          'java'
+//       ]
+//    },
+//    {
+//       title: 'Frontend',
+//       monthDuration: 4,
+//       hourDuration: 909,
+//       modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
+//    }
+// ];
 // Створити для кожного елементу масиву свій блок, блок розділити блоками, в яких будуть зберігатись значення окремих властивостей, для властивості modules зробити список з елементами
 // Приклад структири знаходиться у файлі example.png
-let wrap = document.createElement('div');
-wrap.classList.add('wrap');
-document.body.append(wrap);
+// let wrap = document.createElement('div');
+// wrap.classList.add('wrap');
+// document.body.append(wrap);
 
-for (const coursesArrayObj of coursesArray) {
-   let objWrap = document.createElement('div');
-   document.body.appendChild(objWrap);
+// for (const coursesArrayObj of coursesArray) {
+//    let objWrap = document.createElement('div');
+//    document.body.appendChild(objWrap);
 
-   wrap.append(objWrap);
+//    wrap.append(objWrap);
 
-   let title = document.createElement('div');
-   title.innerHTML = `<h2>${coursesArrayObj.title}</h2>`;
-   objWrap.appendChild(title);
+//    let title = document.createElement('div');
+//    title.innerHTML = `<h2>${coursesArrayObj.title}</h2>`;
+//    objWrap.appendChild(title);
 
-   let duration = document.createElement('div');
-   duration.style.display = 'flex';
-   duration.style.columnGap = '50px';
-   objWrap.appendChild(duration);
+//    let duration = document.createElement('div');
+//    duration.style.display = 'flex';
+//    duration.style.columnGap = '50px';
+//    objWrap.appendChild(duration);
 
-   let monthD = document.createElement('div');
-   monthD.innerHTML = `<h4>Month duration: ${coursesArrayObj.monthDuration}</h4>`;
-   duration.append(monthD);
+//    let monthD = document.createElement('div');
+//    monthD.innerHTML = `<h4>Month duration: ${coursesArrayObj.monthDuration}</h4>`;
+//    duration.append(monthD);
 
-   let hoursD = document.createElement('div');
-   hoursD.innerHTML = `<h4>Hours duration: ${coursesArrayObj.hourDuration}</h4>`;
-   duration.append(hoursD);
+//    let hoursD = document.createElement('div');
+//    hoursD.innerHTML = `<h4>Hours duration: ${coursesArrayObj.hourDuration}</h4>`;
+//    duration.append(hoursD);
 
-   let modules = document.createElement('div');
-   objWrap.append(modules);
-   let modulesList = coursesArrayObj.modules;
+//    let modules = document.createElement('div');
+//    objWrap.append(modules);
+//    let modulesList = coursesArrayObj.modules;
 
 
-   for (const moduleItem of modulesList) {
-      let ul = document.createElement('ul');
-      let li = document.createElement('li');
-      li.innerText = `${moduleItem}`;
-      ul.append(li);
-      modules.append(ul);
-   }
-   objWrap.appendChild(document.createElement('hr'));
-};
+//    for (const moduleItem of modulesList) {
+//       let ul = document.createElement('ul');
+//       let li = document.createElement('li');
+//       li.innerText = `${moduleItem}`;
+//       ul.append(li);
+//       modules.append(ul);
+//    }
+//    objWrap.appendChild(document.createElement('hr'));
+// };
