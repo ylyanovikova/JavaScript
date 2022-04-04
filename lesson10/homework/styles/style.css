@@ -1,0 +1,54 @@
+body{
+    margin: 0;
+}
+.hidden {
+    display: none;
+    transition: 300ms;
+}
+
+.textBtnBlock {
+display: flex;
+flex-direction: column;
+row-gap: 40px;
+
+width: 200px;
+height: 120px;
+padding: 20px;
+box-sizing: border-box;
+
+text-align: center;
+border-radius: 10px;
+border: 1px solid grey;
+}
+
+li{
+    list-style: none;
+    margin: 10px;
+}
+
+ul{
+    margin: 0;
+}
+
+
+.menuText {
+    display: flex;
+    background-color: white;
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    z-index: 1;
+    align-items: flex-end;
+}
+
+
+.menuDiv {
+    position: absolute;
+    transform: translateY(-200%);
+    transition: transform 0.5s;
+}
+
+.menuDiv.active{
+    transform: translateX(0);
+    top: 50px;
+}
