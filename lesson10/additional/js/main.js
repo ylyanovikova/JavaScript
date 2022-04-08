@@ -1,4 +1,4 @@
-// - Описати скріпт, котрий, якщо доєднати до будь-якої сторінки дозволить зробити наступне:
+//1 - Описати скріпт, котрий, якщо доєднати до будь-якої сторінки дозволить зробити наступне:
 // При лівому кліку миші вивести в консоль інформацію про блок або елемент на який відбувся клік.
 // Інформація яку потрібно вивести: Назва тегу, список класів, список ід, розміри в форматі висота*ширина
 // function findElement(bodyElements){
@@ -18,7 +18,7 @@
 
 
 
-
+//2
 // - Описати скріпт, котрий, якщо доєднати до будь-якої сторінки дозволить зробити наступне:
 // При лівому кліку миші  зробить popup (спливаючий блок) в якому буде вся інформація про блок.
 // Інформація яку потрібно вивести в popup: Назва тегу, список класів, список ід, розміри в форматі висота*ширина
@@ -48,20 +48,23 @@
 
 
 
+//3.1
+
 // -- взять массив пользователей
-let usersWithAddress = [
-        {id:1,name: 'vasya', age: 31, status: false, address: {city: 'Lviv', street: 'Shevchenko', number: 16}},
-        {id:2,name: 'petya', age: 30, status: true, address: {city: 'Kyiv', street: 'Shevchenko', number: 1}},
-        {id:3,name: 'kolya', age: 29, status: true, address: {city: 'Lviv', street: 'Shevchenko', number: 121}},
-        {id:4,name: 'olya', age: 28, status: false, address: {city: 'Ternopil', street: 'Shevchenko', number: 90}},
-        {id:5,name: 'max', age: 30, status: true, address: {city: 'Lviv', street: 'Shevchenko', number: 115}},
-        {id:6,name: 'anya', age: 31, status: false, address: {city: 'Kyiv', street: 'Shevchenko', number: 2}},
-        {id:7,name: 'oleg', age: 28, status: false, address: {city: 'Ternopil', street: 'Shevchenko', number: 22}},
-        {id:8,name: 'andrey', age: 29, status: true, address: {city: 'Lviv', street: 'Shevchenko', number: 43}},
-        {id:9,name: 'masha', age: 30, status: true, address: {city: 'Kyiv', street: 'Shevchenko', number: 12}},
-        {id:10,name: 'olya', age: 31, status: false, address: {city: 'Lviv', street: 'Shevchenko', number: 16}},
-        {id:11,name: 'max', age: 31, status: true, address: {city: 'Ternopil', street: 'Shevchenko', number: 121}}
-    ];
+// let usersWithAddress = [
+//         {id:1,name: 'vasya', age: 31, status: false, address: {city: 'Lviv', street: 'Shevchenko', number: 16}},
+//         {id:2,name: 'petya', age: 30, status: true, address: {city: 'Kyiv', street: 'Shevchenko', number: 1}},
+//         {id:3,name: 'kolya', age: 29, status: true, address: {city: 'Lviv', street: 'Shevchenko', number: 121}},
+//         {id:4,name: 'olya', age: 28, status: false, address: {city: 'Ternopil', street: 'Shevchenko', number: 90}},
+//         {id:5,name: 'max', age: 30, status: true, address: {city: 'Lviv', street: 'Shevchenko', number: 115}},
+//         {id:6,name: 'anya', age: 31, status: false, address: {city: 'Kyiv', street: 'Shevchenko', number: 2}},
+//         {id:7,name: 'oleg', age: 28, status: false, address: {city: 'Ternopil', street: 'Shevchenko', number: 22}},
+//         {id:8,name: 'andrey', age: 29, status: true, address: {city: 'Lviv', street: 'Shevchenko', number: 43}},
+//         {id:9,name: 'masha', age: 30, status: true, address: {city: 'Kyiv', street: 'Shevchenko', number: 12}},
+//         {id:10,name: 'olya', age: 31, status: false, address: {city: 'Lviv', street: 'Shevchenko', number: 16}},
+//         {id:11,name: 'max', age: 31, status: true, address: {city: 'Ternopil', street: 'Shevchenko', number: 121}}
+//     ];
+
 // - Создать три чекбокса. Каждый из них активирует фильтр для вышеуказаного массива. Фильтры могут работать как вместе так и по отдельности.
 // 1й - отфильтровывает пользователей со статусом false (осталяет со статусом false)
 // 2й - оставляет старше 29 лет включительно
@@ -129,74 +132,176 @@ let usersWithAddress = [
 // };
 
 
-//all filters
-let input = document.body.getElementsByTagName('input');
-let checkbox1 = input.checkbox1;
-let checkbox2 = input.checkbox2;
-let checkbox3 = input.checkbox3;
+//the same
+// let input = document.body.getElementsByTagName('input');
+// let checkbox1 = input.checkbox1;
+// let checkbox2 = input.checkbox2;
+// let checkbox3 = input.checkbox3;
 
-let checkbox1Filter = usersWithAddress.filter(user=> !user.status);
-let checkbox2Filter = usersWithAddress.filter(user=> user.age >= 29);
-let checkbox3Filter = usersWithAddress.filter(user=> user.address.city === "Kyiv");
+// let results = document.createElement('div');
 
-let results = document.createElement('div');
-// let results1UsersArray = [];
-// let results2UsersArray = [];
-// let results3UsersArray = [];
 
-let resultsArray = [];
-function checkboxClick(checkbox, filter){
-    checkbox.onclick = ()=>{
-        console.log(filter);
+// let checkboxOnclick= (checkbox1, checkbox2, checkbox3)=> {
+//     let results = document.createElement('div');
+    
+//     let userDivContent =(filter)=>{
+//         for (const user of filter) {
+//             let userDiv = document.createElement('div');
+//             userDiv.innerText = `Name: ${user.name} Age: ${user.age}  Status: ${user.status} Address: ${user.address.city} ${user.address.street}`;
+//             results.append(userDiv);
+//         }
+//     }
+//     checkbox1.onclick =()=>{
+//         let checkbox1Filter = usersWithAddress.filter(user=> !user.status);
         
-        // for (const user of filter) {
-        // resultsArray.push(user);
-    //}
-    return resultsArray;
-}
-};
+//         if(checkbox1.checked && !checkbox2.checked && !checkbox3.checked){
+//             userDivContent(checkbox1Filter); 
+//             document.body.appendChild(results);
+//         } else if(!checkbox1.cheked) {
+//             results.innerText = '';
+//             }      
+//     }
+//     checkbox2.onclick = ()=>{
+//         let checkbox2Filter = usersWithAddress.filter(user=> user.age >= 29);
+        
+//         if(!checkbox1.checked && checkbox2.checked && !checkbox3.checked){
+//             userDivContent(checkbox2Filter);
+//             document.body.appendChild(results);
+//         }else if(!checkbox2.checked){
+//             results.innerText = '';
+//         }
+//     }
 
-let checkbox1Result = checkboxClick(checkbox1, checkbox1Filter);
-console.log(checkbox1Result);
-
-
-
-
-
-
-
-
-
-// checkbox1.onclick = ()=>{
-// for (const user of checkbox1Filter) {
-//     results1UsersArray.push(user);
-// }
+//     checkbox3.onclick = ()=>{
+//         let checkbox3Filter = usersWithAddress.filter(user=> user.address.city === "Kyiv");
+        
+//         if(!checkbox1.checked && !checkbox2.checked && checkbox3.checked){
+//             userDivContent(checkbox3Filter);
+//             document.body.appendChild(results);
+//         }else if(!checkbox3.checked){
+//             results.innerText = '';
+//         }
+//     }
+    
+//     checkbox1Filter = '';
+//     checkbox2Filter = '';
+//     checkbox3Filter = '';
 // };
-// console.log(results1UsersArray);
+
+// checkboxOnclick(checkbox1, checkbox2, checkbox3);
 
 
-// checkbox2.onclick = ()=>{
-//     for (const user of checkbox2Filter) {
-//         results2UsersArray.push(user);
+
+
+
+
+
+//all filtres 3.2 with button
+
+// let submitBtn = document.getElementById('submit');
+// let results = document.createElement('div');
+
+// submitBtn.onclick=()=>{
+    
+//     let input = document.body.getElementsByTagName('input');
+//     let checkbox1 = input.checkbox1;
+//     let checkbox2 = input.checkbox2;
+//     let checkbox3 = input.checkbox3;
+
+//     let userDivContent =(array)=>{
+//         for (const user of array) {
+//             let userDiv = document.createElement('div');
+//             userDiv.innerText = `Name: ${user.name} Age: ${user.age}  Status: ${user.status} Address: ${user.address.city} ${user.address.street}`;
+//             results.append(userDiv);
+//         }
+//     };
+//     results.innerText = '';
+
+//     //1
+//     if(checkbox1.checked && !checkbox2.checked && !checkbox3.checked){
+//         let filter = usersWithAddress.filter(user=> !user.status);
+//         userDivContent(filter);
+//         document.body.appendChild(results);
+//     }
+
+//     //2
+//     if (!checkbox1.checked && checkbox2.checked && !checkbox3.checked){
+//         let filter2 = usersWithAddress.filter(user=>user.age>=29);
+//         userDivContent(filter2);
+//         document.body.appendChild(results);
+//     } 
+
+//     //3
+//     if (!checkbox1.checked && !checkbox2.checked && checkbox3.checked){
+//         let filter3 = usersWithAddress.filter(user=> user.address.city === "Kyiv")
+//         userDivContent(filter3)
+//         document.body.appendChild(results);
+//     } 
+
+//     //1 2
+//     if(checkbox1.checked && checkbox2.checked && !checkbox3.checked){
+//         let filter12 = usersWithAddress.filter(user=> !user.status && user.age>=29);
+//         userDivContent(filter12);
+//         document.body.appendChild(results);
+//     }
+
+
+//     //1 3
+//     if(checkbox1.checked && !checkbox2.checked && checkbox3.checked){
+//         let filter13 = usersWithAddress.filter(user=> !user.status && user.address.city === "Kyiv");
+//         userDivContent(filter13)
+//         document.body.appendChild(results);
+//     }
+
+//     //2 3
+//     if(!checkbox1.checked && checkbox2.checked && checkbox3.checked){
+//         let filter23 = usersWithAddress.filter(user=> user.age >= 29 && user.address.city === "Kyiv");
+//         userDivContent(filter23)
+//         document.body.appendChild(results);
+//     }
+
+//     //1 2 3
+//     if(checkbox1.checked && checkbox2.checked && checkbox3.checked){
+//         let filter123 = usersWithAddress.filter(user=> !user.status && user.age>=29 && user.address.city === "Kyiv");
+//         userDivContent(filter123);
+//         document.body.appendChild(results);
 //     }
 // };
 
-// checkbox3.onclick = ()=>{
-//     for (const user of checkbox3Filter) {  
-//         results3UsersArray.push(user);
-//     }
-// };
 
 
 
 
 
-// *****(Прям овердоз с рекурсией) Создать функцию которая принимает какой-либо элемент DOM-структуры .Функция создает в боди 2 кнопки (назад/вперед)
-// при нажатии вперед, вы переходите к дочернему элементу, при еще одном нажатии на "вперед", вы переходите к следующему дочернему элементу (лежащему на одном уровне)
-// НО если у (какого-либо)дочеренего элемента есть дети, то нажатие "вперед" позволяет нам войти внутрь элемента и  выводит первого ребенка. и тд.
-// Когда все дети заканчиваются, мы выходим из данного дочернего элемента и переходим к следующему, лежащему с ним на одном уровне
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // - Напишите «Карусель» – ленту изображений, которую можно листать влево-вправо нажатием на стрелочки.
 
+
+
+
+//5
 //  Завдання важке для розуміння, але дуже легке в реалізації. Тут треба буде погуглити
 //  *** При виділені сегменту тексту на сторінці він стає жирний/курсивний/або якось іншим способом змінює свій стан
+// let div = document.getElementsByTagName('div')[0];
+// console.log(div);
+
+// div.onmouseup = function(){
+
+//    console.log('bhjn'   );
+   
+   
+// }
