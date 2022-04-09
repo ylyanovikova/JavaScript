@@ -287,8 +287,56 @@
 
 
 
-
+//4 +css +html
 // - Напишите «Карусель» – ленту изображений, которую можно листать влево-вправо нажатием на стрелочки.
+// let imagesContainer = document.getElementById('imagesContainer');
+// let left = document.getElementById('btnLeft');
+// let right = document.getElementById('btnRight');
+// let img = document.querySelectorAll("#imagesContainer img");
+
+// let i = 0;
+// let interval = setInterval(runImage, 2500);
+
+// left.addEventListener('click', ()=>{  
+//     i--;
+//     resetInterval();   
+//     changeImg();
+// });
+
+// right.addEventListener('click', ()=>{
+//     i++;
+//     resetInterval();   
+//     changeImg();
+// });
+
+
+// let changeImg = ()=>{
+//     if(i<0){
+//         i= img.length -1;
+//     } else if(i>4){
+//         i=0;
+//     }
+//     imagesContainer.style.transform = `translateX(${-i * 1000}px)`;
+// };
+
+// function runImage(){
+//     i++;
+//     changeImg();
+// };
+
+// let resetInterval =()=>{
+//     clearInterval(interval);
+//     interval = setInterval(runImage, 2500);
+// };
+
+
+
+
+
+
+
+
+
 
 
 
@@ -296,12 +344,5 @@
 //5
 //  Завдання важке для розуміння, але дуже легке в реалізації. Тут треба буде погуглити
 //  *** При виділені сегменту тексту на сторінці він стає жирний/курсивний/або якось іншим способом змінює свій стан
-// let div = document.getElementsByTagName('div')[0];
-// console.log(div);
-
-// div.onmouseup = function(){
-
-//    console.log('bhjn'   );
-   
-   
-// }
+let div = document.getElementsByTagName('div')[0];
+console.log(div);
