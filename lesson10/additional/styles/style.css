@@ -21,6 +21,8 @@ p{
     background: blue;
 } */
 
+
+
 /* Task2 */
 /* body{
     margin: 0 auto;
@@ -115,4 +117,12 @@ p{
 
 .btn:hover{
     color: grey;
+} */
+
+
+
+
+/* task 5 */
+/* ::selection{
+    color: rgb(171, 54, 145);
 } */
