@@ -24,6 +24,7 @@
 
 // -створити форму з інпутами для model,type та volume автівки.
 // при відпарвці форми об'єкти зберігаються в масиві в локальному сховищі.
+//rewrite arr if reload page
 
 // let form = document.forms[0];
 // let model = form.model;
@@ -39,6 +40,23 @@
 //     cars.push(car);
 //     localStorage.setItem('cars', JSON.stringify(cars));
 // };
+
+
+//or
+// let form = document.forms[0];
+// let model = form.model;
+// let type = form.type;
+// let volume = form.volume;
+// let button = document.getElementById('btn');
+
+// button.onclick = (e)=>{
+//     e.preventDefault();
+//     let cars = JSON.parse(localStorage.getItem('cars'))|| [];
+//     let car = {model: model.value, type: type.value, volume: volume.value};
+//     cars.push(car);
+//     localStorage.setItem('cars', JSON.stringify(cars));
+// };
+
 
 
 
