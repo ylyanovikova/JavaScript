@@ -1,0 +1,15 @@
+.posts{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 30px;
+}
+
+.post{
+    width: 18%;
+    height: 250px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 10px;
+}
