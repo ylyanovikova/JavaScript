@@ -29,6 +29,7 @@
 //                         commentsDiv.appendChild(commentDiv);
 //                         }
 //                         postDiv.appendChild(commentsDiv);
+//                         btn.disabled = 'true';
 //                     }
 //                 })
 //             }
