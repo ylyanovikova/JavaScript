@@ -1,0 +1,151 @@
+body{
+    margin: 0 auto;
+    text-align: center;
+    color: var(--dark);
+}
+
+:root{
+--dark: rgb(46, 46, 46);
+--shadow: rgb(234, 216, 12);
+--shadowHover: rgb(150, 215, 255);
+--light: white;
+}
+
+#users{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.user{
+    width: 220px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid var(--dark);
+    border-radius: 30px;
+    box-sizing: border-box;
+    padding: 20px;
+    box-shadow: 0 0 10px var(--shadow);
+    margin: 30px  calc(15% - 110px);
+    transition: 300ms;
+}
+
+.user:hover{
+    box-shadow: 0 0 15px var(--shadowHover);
+    transition: 300ms;
+}
+
+h3{
+    width: 40px;
+    height: 40px;
+    background-color: var(--dark);
+    color: var(--light);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+a{
+    text-decoration: none;
+    color: var(--dark);
+}
+
+
+
+.mainContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+.userCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 350px;
+    border: 1px solid var(--dark);
+    border-radius: 5px;
+}
+
+.userCard > h3{
+    width: 30px;
+    height: 30px;
+    margin: 0  0 20px;
+}
+
+
+.userCard > h2{
+    margin: 0  0 10px;  
+}
+
+.postsBtn{
+    width: 90%;
+    height: 40px;
+    margin: 30px 0;
+    background-color: var(--light);
+    border: 1px solid var(--dark);
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: larger;
+    box-shadow: 0 0 10px var(--shadowHover);
+    color: var(--light);
+    background: var(--dark);
+    transition: 300ms;
+}
+
+.postsBtn:hover{
+    box-shadow:0 0 10px var(--shadow);
+    color: var(--light);
+    background: var(--dark);
+    transition: 300ms;
+}
+
+.postsBlock{
+    width: 90%;
+    height: 500px;
+    text-align: justify;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: calc(18% - 120px);
+}
+
+
+.postBlock {
+    width: 240px;
+    height: 150px;
+    box-sizing: border-box;
+    padding-right: 50px;
+    list-style: none;
+    border: 1px solid var(--dark);
+    border-radius: 20px;
+    box-shadow: 0 0 10px silver;
+    box-sizing: border-box;
+    padding: 20px;
+    display: block;
+    position: relative;
+}
+
+.postDetailsBtn{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background-color: var(--light);
+    border: 1px solid var(--dark);
+    border-radius: 20px;
+    color: var(--light);
+    background: var(--dark);
+    transition: 300ms;
+}
+
+.postDetailsBtn:hover{
+    box-shadow: 0 0 10px var(--shadowHover);
+}

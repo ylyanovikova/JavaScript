@@ -14,5 +14,51 @@
 			"$2"
 		],
 		"description": "Log output to console"
-	}
+	},
+
+
+
+	"Fetch": {
+	"scope": "javascript,typescript",
+	"prefix": "fetch",
+	"body": [
+		"fetch($1)",
+		".then(response => response.json())",
+		".then(value => {",
+		"$2",
+		"});"
+	],
+	"description": "fetch"
+},
+
+
+
+	"Promise": {
+		"scope": "javascript,typescript",
+		"prefix": "promise",
+		"body": [
+			"new Promise((resolve, reject)=>{",
+			"$1",
+			"});"
+		],
+		"description": "new promise"
+	},
+
+
+	"Class": {
+		"scope": "javascript,typescript",
+		"prefix": "class",
+		"body": [
+			"class User {",
+				"constructor($1){",
+				"this.arguments = arguments;",
+				"}",
+			"};"
+		],
+		"description": "class"
+	},
+
+
+	
 }
+
