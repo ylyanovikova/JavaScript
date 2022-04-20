@@ -12,20 +12,18 @@ let mainContainer = document.getElementsByClassName('mainContainer')[0];
 let userCard = document.createElement("div");
 userCard.classList.add("userCard");
 userCard.innerHTML = `<h3> ${user.id}</h3> <h2>${user.username}</h2>  <br>Name: ${user.name}
-<br>Email: ${user.email}
-<br>Phone: ${user.phone}
-<br>Website: ${user.website}
-<b>Address:</b>  ${user.address.city} city, ${user.address.street}, ${user.address.suite}, ${user.address.zipcode} <br>${user.address.geo.lat} ${user.address.geo.lng}
-<b>Company:</b>
- ${user.company.name}
-<br>${user.company.catchPhrase}
-<br>${user.company.bs}`;
-
+    <br>Email: ${user.email}
+    <br>Phone: ${user.phone}
+    <br>Website: ${user.website}
+    <b>Address:</b>  ${user.address.city} city, ${user.address.street}, ${user.address.suite}, ${user.address.zipcode} <br>${user.address.geo.lat} ${user.address.geo.lng}
+    <b>Company:</b>
+    ${user.company.name}
+    <br>${user.company.catchPhrase}
+    <br>${user.company.bs}`;
 
 let postsBtn = document.createElement('button');
 postsBtn.innerText = "Posts of current user";
 postsBtn.classList.add('postsBtn');
-
 
 postsBtn.onclick = function(){
     let postsBlock = document.createElement('ul');
@@ -41,8 +39,11 @@ postsBtn.onclick = function(){
             let postDetailsButton = document.createElement('button');
             postDetailsButton.innerText = "Show post details";
             postDetailsButton.classList.add("postDetailsBtn");
+            postDetailsButton.onclick = function(){
+                location.href = `post-details.html?post=${JSON.stringify(post)}`;
+                this.disabled = 'true';
+            }
             postBlock.appendChild(postDetailsButton);
-
             postsBlock.appendChild(postBlock);
             mainContainer.appendChild(postsBlock);
             this.disabled = 'true';
@@ -51,3 +52,8 @@ postsBtn.onclick = function(){
 }
 
 mainContainer.append(userCard, postsBtn);
+
+let backBtn = document.getElementById('back');
+backBtn.onclick = ()=>{
+    location.href = "./index.html";
+};
